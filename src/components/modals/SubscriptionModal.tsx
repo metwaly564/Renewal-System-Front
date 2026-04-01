@@ -128,7 +128,7 @@ export function SubscriptionModal({
               <Label htmlFor="clientName">Client Name</Label>
               <Input
                 id="clientName"
-                placeholder="Hadeera"
+                placeholder="Tarsiyah"
                 {...register('clientName')}
                 className={errors.clientName ? 'border-destructive' : ''}
               />

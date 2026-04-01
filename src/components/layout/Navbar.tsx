@@ -1,7 +1,8 @@
 import { useAuth } from '@/context/AuthContext';
 import { Button } from '@/components/ui/Button';
-import { RefreshCw, LogOut, Shield } from 'lucide-react';
+import { RefreshCw, LogOut } from 'lucide-react';
 import { useTriggerRenewalCheck } from '@/hooks/useSubscriptions';
+import logo from '@/assets/Logo.png';
 
 export function Navbar() {
   const { admin, logout } = useAuth();
@@ -11,8 +12,8 @@ export function Navbar() {
     <header className="h-14 border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-40 flex items-center px-6">
       {/* Logo */}
       <div className="flex items-center gap-2 mr-auto">
-        <div className="p-1.5 rounded-lg bg-primary/10 border border-primary/20">
-          <Shield className="h-4 w-4 text-primary" />
+        <div className="h-8 w-8 rounded-lg overflow-hidden flex items-center justify-center">
+          <img src={logo} alt="Logo" className="h-full w-full object-contain" />
         </div>
         <span className="text-sm font-semibold text-foreground">Renewal System</span>
         <span className="text-xs text-muted-foreground hidden sm:inline">
